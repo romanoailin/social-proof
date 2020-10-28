@@ -1,0 +1,221 @@
+/*styles.css*/
+
+/* -----------------------------------------------------
+                    VARIABLES      
+------------------------------------------------------*/
+
+:root{
+    --verydarkmagenta:hsl(300, 43%, 22%);
+    --softpink:hsl(333, 80%, 67%);
+    --darkmagenta:hsl(303, 10%, 53%);
+    --lightmagenta:hsl(300, 24%, 96%);
+    --white:hsl(0, 0%, 100%);
+}
+
+* { 
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Spartan', sans-serif;
+    font-size: 15px;
+}
+body{
+    background-color: var(--white);
+}
+.imagenes-fondo{
+    display: flex;
+}
+.img-top{
+    position: fixed;
+    min-width: 50%;
+}
+.img-bottom{
+    min-width: 100%;
+    position: fixed;
+    top:100px;
+}
+/* -----------------------------------------------------
+                    PRINCIPAL       
+------------------------------------------------------*/
+.principal {
+    max-width: 1000px;
+    margin: auto;
+    padding: 5%;
+}
+
+/* -----------------------------------------------------
+                    PRINCIPAL       
+------------------------------------------------------*/
+
+
+.arriba{
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .arriba{
+        display: block;
+    }
+    .descripcion{
+        min-width: 100%;
+        padding: 10%;
+        text-align: center;
+    }
+}
+.ranking{
+    flex-grow: 1;
+}
+
+/* -----------------------------------------------------
+                    DESCRIPCION       
+------------------------------------------------------*/
+.descripcion{
+    max-width: 40%;
+}
+
+.descripcion h1{
+    font-size: 36px;
+    color: var(--verydarkmagenta);
+}
+
+.descripcion p{
+    color: var(--darkmagenta);
+    font-size: 12px;
+    padding-top: 10px;
+    padding-right: 10px;
+    line-height: 2;
+    font-weight: 500;
+}
+/* -----------------------------------------------------
+                    RANKING       
+------------------------------------------------------*/
+
+.ranking-particular{
+    display: flex;
+    margin: 30px;
+    background-color: var(--lightmagenta);
+    padding: 8px;
+    border-radius: 5px;
+    align-items: center;
+    max-width: 70%;
+    flex-wrap: wrap;
+}
+.ranking-particular:nth-child(2){
+    margin-left:15%;
+}
+
+.ranking-particular:nth-child(3){
+    margin-left:25%;
+}
+
+
+.ranking-texto h1{
+    font-size: 12px;
+    color: var(--verydarkmagenta);
+}
+
+.estrellitas-cantidad{
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+@media (max-width: 768px){
+    .ranking{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .ranking-particular{
+        flex-direction: column;
+        margin:0;
+        justify-content: center;
+        min-width: 70%;
+        margin-bottom: 2%;
+        margin-top: 2%;
+        min-height: 100px;
+    }
+    .ranking-particular:nth-child(2), .ranking-particular:nth-child(3){
+        margin: 0;
+        margin-bottom: 2%;
+    }
+    .estrellitas-cantidad{
+        margin-bottom: 8px;
+    }
+}
+/*-------------------------------------------------
+                    TESTIMONIOS       
+------------------------------------------------------*/
+.testimonios{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 15px;
+    min-height: 200px;
+}
+.testimonio-particular{
+    background-color: var(--verydarkmagenta);
+    border-radius: 7px;
+    padding: 8%;
+    min-height: 200px;
+}
+.testimonio-particular:first-child{
+    margin-bottom: 10%;
+}
+.testimonio-particular:nth-child(2){
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.testimonio-particular:nth-child(3){
+    margin-top: 10%;
+}
+.testimonio-titulo{
+    display: flex;
+    align-items: center;
+}
+.testimonio-palabras p{
+    font-size: 12px;
+    color: var(--white);
+    line-height: 1.5;
+}
+.testimonio-palabras{
+    padding-top: 15px;
+}
+.testimonio-imagen img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.testimonio-imagen{
+    margin-right: 20px;
+}
+.testimonio-nombre h1, h2{
+    font-size: 12px;
+}
+.testimonio-nombre h1{
+    color: var(--white);
+}
+
+.testimonio-nombre h2{
+    color: var(--softpink);
+    font-weight: 400;
+}
+.attribution {
+    margin-top: 3%;
+    border-top: 1px solid darkorchid ;
+    padding: 5px;
+    text-align: center;
+}
+
+@media (max-width: 768px){
+    .testimonios{
+        display:block;
+    }
+    .testimonio-particular:first-child , .testimonio-particular:nth-child(2) , .testimonio-particular:nth-child(3) {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin: 5%;
+    }
+/* -----------------------------------------------------
+                    MEDIA-QUERY       
+------------------------------------------------------*/
